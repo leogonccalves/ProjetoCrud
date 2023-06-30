@@ -1,4 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 
+
+:root {
+  /* Definindo as cores personalizadas */
+  --custom-app-primary: #2196f3;
+  --custom-app-secondary: #3f51b5;
+  --custom-app-warn: #f44336;
+}
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
