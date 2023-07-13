@@ -1,10 +1,27 @@
-import { Component } from '@angular/core';
+import { HomesService } from './../services/homes.service';
+import { Component, OnInit } from '@angular/core';
+import { Home } from '../model/home';
 
 @Component({
   selector: 'app-homes',
   templateUrl: './homes.component.html',
   styleUrls: ['./homes.component.css']
 })
-export class HomesComponent {
+export class HomesComponent implements OnInit {
+
+  homes: Home[] = [];
+
+  displayedColumns = ['name', 'local'];
+
+
+
+  constructor( private HomesService: HomesService) {
+
+      this.homes = this.HomesService.list();
+  }
+
+  ngOnInit(): void {
+
+  }
 
 }
